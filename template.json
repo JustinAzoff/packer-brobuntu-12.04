@@ -1,7 +1,7 @@
-{ "variables":
-    "bro_treeish": "v2.2"
-},
 {
+    "variables": {
+        "bro_treeish": "v2.2"
+    },
     "builders": [
         {
             "type": "vmware",
