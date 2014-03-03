@@ -16,10 +16,10 @@
                 "initrd=/install/initrd.gz -- <enter>"
             ],
             "http_directory": "http",
-            "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
+            "shutdown_command": "echo 'bro' | sudo -S shutdown -P now",
             "ssh_wait_timeout": "20m",
-            "ssh_username": "vagrant",
-            "ssh_password": "vagrant",
+            "ssh_username": "bro",
+            "ssh_password": "bro",
             "tools_upload_flavor": "linux"
         },
         {
@@ -39,20 +39,20 @@
             ],
             "guest_os_type": "Ubuntu_64",
             "http_directory": "http",
-            "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
+            "shutdown_command": "echo 'bro' | sudo -S shutdown -P now",
             "ssh_wait_timeout": "20m",
             "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
             "virtualbox_version_file": ".vbox_version",
-            "ssh_username": "vagrant",
-            "ssh_password": "vagrant"
+            "ssh_username": "bro",
+            "ssh_password": "bro"
         }
     ],
 
     "provisioners": [
         {
             "type": "shell",
-            "script": "scripts/vagrant.sh",
-            "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
+            "script": "scripts/bro.sh",
+            "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
         },
         {
             "type": "shell",
@@ -62,7 +62,7 @@
                     "execute_command": "/bin/true"
                 },
                 "vmware": {
-                    "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
+                    "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
                 }
             }
         },
@@ -71,7 +71,7 @@
             "script": "scripts/virtualbox.sh",
             "override": {
                 "virtualbox": {
-                    "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
+                    "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
                 },
                 "vmware": {
                     "execute_command": "/bin/true"
@@ -83,14 +83,14 @@
             "scripts": [
                 "scripts/docker.sh"
             ],
-            "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
+            "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
         },
         {
             "type": "shell",
             "scripts": [
                 "scripts/vm_cleanup.sh"
             ],
-            "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
+            "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
         }
     ],
 

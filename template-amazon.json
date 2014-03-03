@@ -34,7 +34,7 @@
 
     "post-processors": [
         {
-            "type": "vagrant",
+            "type": "bro",
             "keep_input_artifact": true
         }
     ]

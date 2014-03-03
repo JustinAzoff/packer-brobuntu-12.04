@@ -7,5 +7,5 @@ mkdir -p /mnt/cdrom
 mount -o loop ~/linux.iso /mnt/cdrom
 tar zxf /mnt/cdrom/VMwareTools-*.tar.gz -C /tmp/
 /tmp/vmware-tools-distrib/vmware-install.pl -d
-rm /home/vagrant/linux.iso
+rm /home/bro/linux.iso
 umount /mnt/cdrom
