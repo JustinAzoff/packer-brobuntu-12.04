@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=2.2
+TREEISH=$1
 
 export DEBIAN_FRONTEND=noninteractive
 
@@ -15,7 +15,7 @@ function pre_setup {
 }
 
 function install_prereqs {
-    apt-get -y install build-essential
+    apt-get -y install build-essential git
     apt-get -y install bison flex cmake swig
     apt-get -y install libssl-dev libgeoip-dev libmagic-dev libpcap-dev python-dev libcurl4-openssl-dev
 }
@@ -25,19 +25,20 @@ function install_bro {
         echo "bro already installed"
         return
     fi
-    if [ ! -e bro-${VERSION}.tar.gz ] ; then
-        echo "downloading bro"
-        wget -c http://www.bro.org/downloads/release/bro-${VERSION}.tar.gz --progress=dot:mega
-    fi
-    if [ ! -e bro-${VERSION} ] ; then
-        echo "untarring bro"
-        tar xzf bro-${VERSION}.tar.gz
-    fi
-    cd bro-${VERSION}
+    cd /usr/src/
+    git clone --recursive git://git.bro.org/bro
+    cd bro
+    git checkout $TREEISH || die "checkout failed"
+    git submodule update --recursive --init
+    #overkill?
+    git reset --hard
+    git submodule foreach --recursive git reset --hard
+    git checkout .
+    git submodule foreach --recursive git checkout .
+
     ./configure || die "configure failed"
     make || die "build failed"
     sudo make install || die "install failed"
-
 }
 
 function configure_bro {
