@@ -29,6 +29,6 @@ At the end of that, you'll have an image for importing into virtualbox
 
 ## Building additional VMs and specifying the Bro version
 
-    $ packer build -var 'bro_treeish=v2.2' template-bro.json
-    $ packer build -var 'bro_treeish=HEAD' template-bro.json
+    $ make VER=HEAD
+    $ make VER=v2.1
     $ #etc

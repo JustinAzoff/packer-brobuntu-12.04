@@ -1,18 +1,17 @@
-all: cache bro-2.2
+VER=v2.2
+all: brobuntu
+
 cache: src/bro.tgz
-
-bro-2.2: output-brobuntu-vbox-v2.2/brobuntu-v2.2-disk1.vmdk
-bro-head: output-brobuntu-vbox-HEAD/brobuntu-HEAD-disk1.vmdk
-
 
 src/bro.tgz:
 	./src/clone_bro
 
+base: output-lubuntu-vbox/lubuntu-disk1.vmdk
+
 output-lubuntu-vbox/lubuntu-disk1.vmdk:
 	time packer build -only=lubuntu-vbox template-base.json
 
-output-brobuntu-vbox-v2.2/brobuntu-v2.2-disk1.vmdk: cache
-	time packer build -only=brobuntu-vbox -var 'bro_treeish=v2.2' template-bro.json
+brobuntu: cache base output-brobuntu-vbox-$(VER)/brobuntu-$(VER)-disk1.vmdk
 
-output-brobuntu-vbox-HEAD/brobuntu-HEAD-disk1.vmdk: cache
-	time packer build -only=brobuntu-vbox -var 'bro_treeish=HEAD' template-bro.json
+output-brobuntu-vbox-$(VER)/brobuntu-$(VER)-disk1.vmdk:
+	time packer build -only=brobuntu-vbox -var 'bro_treeish=$(VER)' template-bro.json
