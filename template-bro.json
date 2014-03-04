@@ -9,7 +9,7 @@
       "ssh_username": "bro",
       "ssh_wait_timeout": "30s",
       "type": "virtualbox-ovf",
-      "vm_name": "brobuntu"
+      "vm_name": "brobuntu-{{user `bro_treeish`}}"
     },
     {
       "name": "brobuntu-vmware",
@@ -20,7 +20,7 @@
       "ssh_username": "bro",
       "ssh_wait_timeout": "30s",
       "type": "vmware-vmx",
-      "vm_name": "brobuntu"
+      "vm_name": "brobuntu-{{user `bro_treeish`}}"
     }
   ],
   "post-processors": null,
