@@ -62,10 +62,10 @@
             "type": "shell",
             "script": "scripts/fusion.sh",
             "override": {
-                "virtualbox-iso": {
+                "lubuntu-vbox": {
                     "execute_command": "/bin/true"
                 },
-                "vmware-iso": {
+                "lubuntu-vmware": {
                     "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
                 }
             }
@@ -74,10 +74,10 @@
             "type": "shell",
             "script": "scripts/virtualbox.sh",
             "override": {
-                "virtualbox-iso": {
+                "lubuntu-vbox": {
                     "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
                 },
-                "vmware-iso": {
+                "lubuntu-vmware": {
                     "execute_command": "/bin/true"
                 }
             }
