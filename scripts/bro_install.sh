@@ -2,6 +2,10 @@
 
 TREEISH=$1
 
+if [ "$TREEISH" == "" ]; then
+    TREEISH="HEAD"
+fi
+
 export DEBIAN_FRONTEND=noninteractive
 
 function die {
