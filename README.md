@@ -20,3 +20,9 @@ At the end of that, you'll have an image for importing into virtualbox
      12K    output-brobuntu-vbox-v2.2/brobuntu-v2.2.ovf
     559M    output-lubuntu-vbox/lubuntu-disk1.vmdk
      12K    output-lubuntu-vbox/lubuntu.ovf
+
+## Specifying the Bro version
+
+    $ packer build -var 'bro_treeish=v2.2' template-bro.json
+    $ packer build -var 'bro_treeish=HEAD' template-bro.json
+    $ #etc
