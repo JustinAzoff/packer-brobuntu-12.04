@@ -42,7 +42,7 @@ function install_bro {
     git submodule foreach --recursive git checkout .
 
     ./configure || die "configure failed"
-    make || die "build failed"
+    make -j2 || die "build failed"
     sudo make install || die "install failed"
     make clean
     #change ownership to bro user
