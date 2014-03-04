@@ -1,7 +1,7 @@
 # Packer Template for Bro
 
-This repository contains a Packer template for building an Ubuntu 12.04
-with Bro installed inside of it.
+This repository contains a Packer template for building an Ubuntu 12.04 VM
+with Bro installed.
 
 ## Usage
 
