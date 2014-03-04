@@ -49,7 +49,7 @@ function configure_bro {
     if [ ! -e /bro/site ]; then
         (cd /bro ; ln -s share/bro/site . )
     fi
-    
+    echo 'export PATH=$PATH:/bro/bin' > /etc/profile.d/bro.sh
 }
 
 pre_setup
