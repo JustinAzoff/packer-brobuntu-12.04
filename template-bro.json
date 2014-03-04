@@ -7,7 +7,7 @@
       "ssh_username": "bro",
       "ssh_wait_timeout": "30s",
       "type": "virtualbox-ovf",
-      "vm_name": "brobuntu-training"
+      "vm_name": "brobuntu"
     },
     {
       "shutdown_command": "sudo shutdown -P now",
@@ -16,7 +16,7 @@
       "ssh_username": "bro",
       "ssh_wait_timeout": "30s",
       "type": "vmware-vmx",
-      "vm_name": "brobuntu-training"
+      "vm_name": "brobuntu"
     }
   ],
   "post-processors": null,
