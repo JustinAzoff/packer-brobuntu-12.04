@@ -16,7 +16,7 @@ Run the following:
 At the end of that, you'll have an image for importing into virtualbox
 
     $ du -hs output-*/*
-    511M   output-lubuntu-vbox/lubuntu-disk1.vmdk
-     12K   output-lubuntu-vbox/lubuntu.ovf
-    700M   output-brobuntu-vbox/brobuntu-disk1.vmdk
-     12K   output-brobuntu-vbox/brobuntu.ovf
+    623M    output-brobuntu-vbox/brobuntu-disk1.vmdk
+     12K    output-brobuntu-vbox/brobuntu.ovf
+    559M    output-lubuntu-vbox/lubuntu-disk1.vmdk
+     12K    output-lubuntu-vbox/lubuntu.ovf
