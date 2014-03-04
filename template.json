@@ -42,7 +42,7 @@
                 "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=USA keyboard-configuration/variant=USA console-setup/ask_detect=false ",
                 "initrd=/install/initrd.gz -- <enter>"
             ],
-            "guest_os_type": "Ubuntu_64",
+            "guest_os_type": "Ubuntu_32",
             "http_directory": "http",
             "shutdown_command": "echo 'bro' | sudo -S shutdown -P now",
             "ssh_wait_timeout": "20m",
