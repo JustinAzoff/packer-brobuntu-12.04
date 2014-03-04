@@ -26,20 +26,8 @@
     {
       "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "scripts": [
-        "scripts/upgrade.sh"
-      ],
-      "type": "shell"
-    },
-    {
-      "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}' {{user `bro_treeish`}}",
-      "scripts": [
-        "scripts/bro_install.sh"
-      ],
-      "type": "shell"
-    },
-    {
-      "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
-      "scripts": [
+        "scripts/upgrade.sh",
+        "scripts/bro_install.sh",
         "scripts/vm_cleanup.sh"
       ],
       "type": "shell"
