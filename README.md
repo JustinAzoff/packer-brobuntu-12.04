@@ -14,7 +14,6 @@ Run the following:
 
 At the end of that, you'll have an image for importing into virtualbox
 
-$ du -hs output-virtualbox-iso/*
-
+    $ du -hs output-virtualbox-iso/*
     597M    output-virtualbox-iso/brobuntu-disk1.vmdk
      12K    output-virtualbox-iso/brobuntu.ovf
