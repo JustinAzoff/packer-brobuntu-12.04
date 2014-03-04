@@ -30,7 +30,12 @@ function install_bro {
         return
     fi
     cd /usr/src/
-    git clone --recursive git://git.bro.org/bro
+    if [ -e /tmp/bro.tgz ]; then
+        tar xzf /tmp/bro.tgz
+        rm /tmp/bro.tgz
+    else
+        git clone --recursive git://git.bro.org/bro
+    fi
     cd bro
     git pull
     git checkout $TREEISH || die "checkout failed"

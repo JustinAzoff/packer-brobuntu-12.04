@@ -1,1 +1,4 @@
 /packer_cache/
+src/bro
+src/bro.tgz
+output-*

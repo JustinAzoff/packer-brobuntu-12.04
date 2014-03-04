@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#handle if this was ran from the parent dir
+if [ -e template-bro.json ] ; then
+    cd src
+fi
+
+echo "Cloning bro source into `pwd`"
+git clone --recursive git://git.bro.org/bro
+tar cvzf bro.tgz bro
