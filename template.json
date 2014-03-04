@@ -4,6 +4,7 @@
     },
     "builders": [
         {
+            "vm_name": "brobuntu",
             "type": "vmware",
             "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-amd64.iso",
             "iso_checksum": "3aeb42816253355394897ae80d99a9ba56217c0e98e05294b51f0f5b13bceb54",
@@ -26,6 +27,7 @@
             "tools_upload_flavor": "linux"
         },
         {
+            "vm_name": "brobuntu",
             "type": "virtualbox",
             "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-amd64.iso",
             "iso_checksum": "3aeb42816253355394897ae80d99a9ba56217c0e98e05294b51f0f5b13bceb54",
