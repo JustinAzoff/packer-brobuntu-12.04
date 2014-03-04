@@ -39,6 +39,7 @@ function install_bro {
     ./configure || die "configure failed"
     make || die "build failed"
     sudo make install || die "install failed"
+    make clean
 }
 
 function configure_bro {
