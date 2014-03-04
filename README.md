@@ -10,10 +10,13 @@ Then, clone this repository and `cd` into it.
 
 Run the following:
 
-    $ packer build template.json
+    $ packer build -only=lubuntu-vbox template-base.json
+    $ packer build -only=brobuntu-vbox template-bro.json
 
 At the end of that, you'll have an image for importing into virtualbox
 
-    $ du -hs output-virtualbox-iso/*
-    597M    output-virtualbox-iso/brobuntu-disk1.vmdk
-     12K    output-virtualbox-iso/brobuntu.ovf
+    $ du -hs output-*/*
+    511M   output-lubuntu-vbox/lubuntu-disk1.vmdk
+     12K   output-lubuntu-vbox/lubuntu.ovf
+    700M   output-brobuntu-vbox/brobuntu-disk1.vmdk
+     12K   output-brobuntu-vbox/brobuntu.ovf
