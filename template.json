@@ -5,7 +5,7 @@
     "builders": [
         {
             "vm_name": "brobuntu",
-            "type": "vmware",
+            "type": "vmware-iso",
             "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-amd64.iso",
             "iso_checksum": "3aeb42816253355394897ae80d99a9ba56217c0e98e05294b51f0f5b13bceb54",
             "iso_checksum_type": "sha256",
@@ -28,7 +28,7 @@
         },
         {
             "vm_name": "brobuntu",
-            "type": "virtualbox",
+            "type": "virtualbox-iso",
             "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-amd64.iso",
             "iso_checksum": "3aeb42816253355394897ae80d99a9ba56217c0e98e05294b51f0f5b13bceb54",
             "iso_checksum_type": "sha256",
@@ -63,10 +63,10 @@
             "type": "shell",
             "script": "scripts/fusion.sh",
             "override": {
-                "virtualbox": {
+                "virtualbox-iso": {
                     "execute_command": "/bin/true"
                 },
-                "vmware": {
+                "vmware-iso": {
                     "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
                 }
             }
@@ -75,10 +75,10 @@
             "type": "shell",
             "script": "scripts/virtualbox.sh",
             "override": {
-                "virtualbox": {
+                "virtualbox-iso": {
                     "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
                 },
-                "vmware": {
+                "vmware-iso": {
                     "execute_command": "/bin/true"
                 }
             }
@@ -103,12 +103,6 @@
                 "scripts/vm_cleanup.sh"
             ],
             "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
-        }
-    ],
-
-    "post-processors": [
-        {
-            "type": "compress"
         }
     ]
 }
