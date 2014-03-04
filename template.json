@@ -6,8 +6,8 @@
         {
             "vm_name": "brobuntu",
             "type": "vmware-iso",
-            "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-amd64.iso",
-            "iso_checksum": "3aeb42816253355394897ae80d99a9ba56217c0e98e05294b51f0f5b13bceb54",
+            "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-i386.iso",
+            "iso_checksum": "fbe7f159337551cc5ce9f0ff72acefef567f3dcd30750425287588c554978501",
             "iso_checksum_type": "sha256",
             "boot_wait": "5s",
             "boot_command": [
@@ -29,8 +29,8 @@
         {
             "vm_name": "brobuntu",
             "type": "virtualbox-iso",
-            "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-amd64.iso",
-            "iso_checksum": "3aeb42816253355394897ae80d99a9ba56217c0e98e05294b51f0f5b13bceb54",
+            "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-i386.iso",
+            "iso_checksum": "fbe7f159337551cc5ce9f0ff72acefef567f3dcd30750425287588c554978501",
             "iso_checksum_type": "sha256",
             "boot_wait": "5s",
             "boot_command": [
