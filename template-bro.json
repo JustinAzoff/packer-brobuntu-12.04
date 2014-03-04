@@ -1,0 +1,43 @@
+{
+  "builders": [
+    {
+      "shutdown_command": "sudo -S shutdown -P now",
+      "source_path": "output-virtualbox-iso/lubuntu.ovf",
+      "ssh_password": "bro",
+      "ssh_username": "bro",
+      "ssh_wait_timeout": "30s",
+      "type": "virtualbox-ovf",
+      "vm_name": "brobuntu-training"
+    },
+    {
+      "shutdown_command": "sudo shutdown -P now",
+      "source_path": "output-vmware-iso/lubuntu.vmx",
+      "ssh_password": "bro",
+      "ssh_username": "bro",
+      "ssh_wait_timeout": "30s",
+      "type": "vmware-vmx",
+      "vm_name": "brobuntu-training"
+    }
+  ],
+  "post-processors": null,
+  "provisioners": [
+    {
+      "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "scripts": [
+        "scripts/upgrade.sh"
+      ],
+      "type": "shell"
+    },
+    {
+      "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}' {{user `bro_treeish`}}",
+      "scripts": [
+        "scripts/bro_install.sh"
+      ],
+      "type": "shell"
+    }
+  ],
+  "variables": {
+    "bro_treeish": "v2.2"
+  }
+}
+

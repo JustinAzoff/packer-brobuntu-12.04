@@ -28,6 +28,7 @@ function install_bro {
     cd /usr/src/
     git clone --recursive git://git.bro.org/bro
     cd bro
+    git pull
     git checkout $TREEISH || die "checkout failed"
     git submodule update --recursive --init
     #overkill?

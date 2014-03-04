@@ -1,10 +1,7 @@
 {
-    "variables": {
-        "bro_treeish": "v2.2"
-    },
     "builders": [
         {
-            "vm_name": "brobuntu",
+            "vm_name": "lubuntu",
             "type": "vmware-iso",
             "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-i386.iso",
             "iso_checksum": "fbe7f159337551cc5ce9f0ff72acefef567f3dcd30750425287588c554978501",
@@ -27,7 +24,7 @@
             "tools_upload_flavor": "linux"
         },
         {
-            "vm_name": "brobuntu",
+            "vm_name": "lubuntu",
             "type": "virtualbox-iso",
             "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-i386.iso",
             "iso_checksum": "fbe7f159337551cc5ce9f0ff72acefef567f3dcd30750425287588c554978501",
@@ -42,7 +39,7 @@
                 "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=USA keyboard-configuration/variant=USA console-setup/ask_detect=false ",
                 "initrd=/install/initrd.gz -- <enter>"
             ],
-            "guest_os_type": "Ubuntu_32",
+            "guest_os_type": "Ubuntu",
             "http_directory": "http",
             "shutdown_command": "echo 'bro' | sudo -S shutdown -P now",
             "ssh_wait_timeout": "20m",
@@ -86,9 +83,9 @@
         {
             "type": "shell",
             "scripts": [
-                "scripts/install_bro.sh"
+                "scripts/bro_deps.sh"
             ],
-            "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}' {{user `bro_treeish`}}"
+            "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
         },
         {
             "type": "shell",
