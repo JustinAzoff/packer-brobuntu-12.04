@@ -41,6 +41,8 @@ function install_bro {
     make || die "build failed"
     sudo make install || die "install failed"
     make clean
+    #change ownership to bro user
+    chown -R bro: /usr/src/bro
 }
 
 function configure_bro {
