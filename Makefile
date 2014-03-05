@@ -1,10 +1,14 @@
 VER=v2.2
+FILESET=""
 all: brobuntu
 
-cache: src/bro.tgz
+cache: src/bro.tgz get-fileset
 
 src/bro.tgz:
 	./src/clone_bro
+
+get-fileset:
+	./get_fileset.py $(FILESET)
 
 base: output-lubuntu-vbox/lubuntu-disk1.vmdk
 

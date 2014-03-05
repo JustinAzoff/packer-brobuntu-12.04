@@ -1,0 +1,12 @@
+{
+    "standard" : {
+        "repo": "https://github.com/JustinAzoff/bro-training-material.git",
+        "dir": "bro-training-material",
+        "files": [
+            "traces/sslv2.pcap",
+            "traces/browse.pcap",
+            "exercises/faf",
+            "exercises/incident-response"
+        ]
+    }
+}
