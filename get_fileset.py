@@ -5,7 +5,6 @@ import json
 import subprocess
 
 def get_fileset(fs):
-    print fs
     if not os.path.exists(fs["dir"]):
         subprocess.check_call(["git", "clone", fs["repo"], fs["dir"]])
     os.chdir(fs["dir"])
