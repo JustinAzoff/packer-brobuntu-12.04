@@ -22,5 +22,6 @@ def get_filesets(filesets):
             get_fileset(data[fs])
 
 if __name__ == "__main__":
-    filesets = sys.argv[1].split(",")
-    get_filesets(filesets)
+    filesets = sys.argv[1]
+    if filesets and filesets != "none":
+        get_filesets(filesets.split(","))

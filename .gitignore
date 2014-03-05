@@ -3,3 +3,4 @@ src/bro
 src/bro.tgz
 output-*
 filesets
+template-bro-filesets-*
