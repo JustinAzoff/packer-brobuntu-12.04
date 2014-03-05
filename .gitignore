@@ -1,6 +1,6 @@
 /packer_cache/
 src/bro
 src/bro.tgz
-output-*
+output
 filesets
 template-bro-filesets-*

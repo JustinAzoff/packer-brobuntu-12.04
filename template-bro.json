@@ -2,9 +2,9 @@
   "builders": [
     {
       "name": "brobuntu-vbox",
-      "output_directory": "output-brobuntu-vbox-{{user `bro_treeish`}}-{{user `bro_filesets`}}",
+      "output_directory": "output/brobuntu-vbox-{{user `bro_treeish`}}-{{user `bro_filesets`}}",
       "shutdown_command": "sudo -S shutdown -P now",
-      "source_path": "output-lubuntu-vbox/lubuntu.ovf",
+      "source_path": "output/lubuntu-vbox/lubuntu.ovf",
       "ssh_password": "bro",
       "ssh_username": "bro",
       "ssh_wait_timeout": "30s",
@@ -13,9 +13,9 @@
     },
     {
       "name": "brobuntu-vmware",
-      "output_directory": "output-brobuntu-vmware-{{user `bro_treeish`}}-{{user `bro_filesets`}}",
+      "output_directory": "output/brobuntu-vmware-{{user `bro_treeish`}}-{{user `bro_filesets`}}",
       "shutdown_command": "sudo shutdown -P now",
-      "source_path": "output-lubuntu-vmware/lubuntu.vmx",
+      "source_path": "output/lubuntu-vmware/lubuntu.vmx",
       "ssh_password": "bro",
       "ssh_username": "bro",
       "ssh_wait_timeout": "30s",

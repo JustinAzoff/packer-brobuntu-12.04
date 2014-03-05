@@ -2,6 +2,7 @@
     "builders": [
         {
             "name": "lubuntu-vmware",
+            "output_directory": "output/lubuntu-vmware",
             "vm_name": "lubuntu",
             "type": "vmware-iso",
             "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-i386.iso",
@@ -26,6 +27,7 @@
         },
         {
             "name": "lubuntu-vbox",
+            "output_directory": "output/lubuntu-vbox",
             "vm_name": "lubuntu",
             "type": "virtualbox-iso",
             "iso_url": "http://cosmos.cites.illinois.edu/pub/ubuntu-iso/12.04/ubuntu-12.04.4-server-i386.iso",
