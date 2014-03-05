@@ -20,5 +20,5 @@ brobuntu: cache base output-brobuntu-vbox-$(VER)-$(FILESETS)/brobuntu-$(VER)-$(F
 template-bro-filesets-$(FILESETS).json: get-filesets
 	./inject_filesets.py template-bro.json template-bro-filesets-$(FILESETS).json
 
-output-brobuntu-vbox-$(VER)-$(FILESETS)/brobuntu-$(VER)-disk1.vmdk: template-bro-filesets-$(FILESETS).json
+output-brobuntu-vbox-$(VER)-$(FILESETS)/brobuntu-$(VER)-$(FILESETS)-disk1.vmdk: template-bro-filesets-$(FILESETS).json
 	time packer build -only=brobuntu-vbox -var 'bro_treeish=$(VER)' -var 'bro_filesets=$(FILESETS)' template-bro-filesets-$(FILESETS).json
