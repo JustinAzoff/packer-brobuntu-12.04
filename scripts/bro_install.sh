@@ -37,6 +37,7 @@ function install_bro {
         git clone --recursive git://git.bro.org/bro
     fi
     cd bro
+    git fetch origin $TREEISH
     git pull
     git checkout $TREEISH || die "checkout failed"
     git submodule update --recursive --init
