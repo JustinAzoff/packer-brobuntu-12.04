@@ -22,8 +22,8 @@ Or more explicitly:
 At the end of that, you'll have an image for importing into virtualbox
 
     $ du -hs output/*/*
-    623M    output/brobuntu-vbox-v2.2/brobuntu-v2.2-disk1.vmdk
-     12K    output/brobuntu-vbox-v2.2/brobuntu-v2.2.ovf
+    623M    output/brobuntu-vbox-v2.2-none/brobuntu-v2.2-disk1.vmdk
+     12K    output/brobuntu-vbox-v2.2-none/brobuntu-v2.2.ovf
     559M    output/lubuntu-vbox/lubuntu-disk1.vmdk
      12K    output/lubuntu-vbox/lubuntu.ovf
 
