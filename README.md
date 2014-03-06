@@ -32,3 +32,12 @@ At the end of that, you'll have an image for importing into virtualbox
     $ make VER=HEAD
     $ make VER=v2.1
     $ #etc
+
+## Filesets
+
+To build a VM with filesets included, [install git-annex](https://git-annex.branchable.com/install/) and run
+
+    $ make VER=HEAD FILESETS=standard
+    $ du -hs output/brobuntu-vbox-HEAD-standard/brobuntu-HEAD-standard*
+    638M    output/brobuntu-vbox-HEAD-standard/brobuntu-HEAD-standard-disk1.vmdk
+     12K    output/brobuntu-vbox-HEAD-standard/brobuntu-HEAD-standard.ovf
