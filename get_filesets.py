@@ -16,6 +16,8 @@ def get_fileset(fs):
 
 def get_filesets(filesets):
     data = json.load(open("filesets.json"))
+    if not os.path.exists("filesets"):
+        os.mkdir("filesets")
     os.chdir("filesets")
     for fs in filesets:
         if fs in data:
