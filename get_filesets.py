@@ -21,7 +21,9 @@ def get_filesets(filesets):
     if not os.path.exists("filesets"):
         os.mkdir("filesets")
     os.chdir("filesets")
+    filesets_path = os.getcwd()
     for fs in filesets:
+        os.chdir(filesets_path)
         if fs in data:
             get_fileset(data[fs])
 
