@@ -25,4 +25,4 @@ dd if=/dev/zero of=/EMPTY bs=1M
 rm -f /EMPTY
 
 echo "Delete extra directories in HOME"
-rmdir ~bro/*
+rmdir ~bro/* || true
