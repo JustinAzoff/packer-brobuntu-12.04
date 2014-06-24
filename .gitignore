@@ -3,4 +3,5 @@ src/bro
 src/bro.tgz
 output
 filesets
-template-bro-filesets-*
+template-bro-filesets-*.json
+filesets-*.json
