@@ -2,11 +2,13 @@
     "standard" : {
         "method": "zsync",
         "url": "http://www.bouncybouncy.net/test-2014.tar.zsync",
-        "dest": "test-2014.tar"
+        "dest": "test-2014.tar",
+        "path": "~/test-2014"
     },
     "blah" : {
         "method": "zsync",
         "url": "http://www.bouncybouncy.net/blah-2014.tar.zsync",
-        "dest": "blah-2014.tar"
+        "dest": "blah-2014.tar",
+        "path": "~/blah-2014"
     }
 }

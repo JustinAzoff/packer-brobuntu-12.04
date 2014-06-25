@@ -5,27 +5,40 @@ import json
 import subprocess
 from optparse import OptionParser
 
-def unpack(fn):
-    subprocess.check_call(["tar", "xvf", fn])
+def unpack(fs):
+    fn = fs["dest"]
+    path = os.path.expanduser(fs["path"])
+    if not os.path.isdir(path):
+        os.makedirs(path)
+    subprocess.check_call(["tar", "xvf", fn,  "-C", path])
 
-def zsync(url):
+def zsync(fs):
+    url = fs["url"]
     subprocess.check_call(["zsync", url])
 
-def wget(url):
+def wget(fs):
+    url = fs["url"]
     subprocess.check_call(["wget", "-N", url])
+
+def local(fs):
+    url = fs["url"]
+    dest = fs["dest"]
+    if os.path.exists(dest):
+        os.unlink(dest)
+    os.symlink(url, dest)
 
 DOWNLOADERS = {
     'zsync': zsync,
     'http': wget,
+    'local': local,
 }
 
 def get_fileset(fs):
     if 'url' not in fs:
         return
-    url = fs["url"]
     method = fs["method"]
     downloader = DOWNLOADERS[method]
-    downloader(url)
+    downloader(fs)
 
 def get_filesets(filesets, do_unpack):
     data = json.load(open("filesets.json"))
@@ -38,7 +51,7 @@ def get_filesets(filesets, do_unpack):
         if fs in data:
             get_fileset(data[fs])
             if do_unpack:
-                unpack(data[fs]["dest"])
+                unpack(data[fs])
 
 def expand(l):
     o = []
