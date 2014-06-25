@@ -31,7 +31,7 @@ def modify_template(src, dst, filesets_subset, filesets):
         })
 
     with open(filesets_subset, 'w') as f:
-        subset = dict((fs, data[fs]) for fs in filesets)
+        subset = dict((fs, data[fs]) for fs in filesets if data[fs]["method"] != "local")
         json.dump(subset, f, indent=4)
 
     file_copies.append({
