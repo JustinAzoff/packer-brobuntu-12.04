@@ -16,8 +16,13 @@ if ! grep -q 'pre-up sleep' /etc/network/interfaces; then
     echo "pre-up sleep 2" >> /etc/network/interfaces
 fi
 
-#running apt-get clean
+#Clean package stuff
 apt-get clean
+rm /var/lib/apt/lists/*
+rm /var/cache/lsc_packages.db
+
+#remove packages that aren't needed anymore
+apt-get autoremove -y
 
 # Zero out the free space to save space in the final image:
 echo "Zeroing device to make space..."
