@@ -28,6 +28,10 @@ apt-get autoremove -y
 echo "Zeroing device to make space..."
 dd if=/dev/zero of=/EMPTY bs=1M
 rm -f /EMPTY
+#give this a few seconds to settle
+sleep 2
+sync
+sleep 2
 
 echo "Delete extra directories in HOME"
 rmdir ~bro/* || true
