@@ -58,10 +58,6 @@ def modify_template(src, dst, filesets_subset, filesets):
     })
     orig["provisioners"].append({
         "type": "shell",
-        "inline": ["sudo apt-get -y install zsync"]
-    })
-    orig["provisioners"].append({
-        "type": "shell",
         "inline": ["cd /home/bro && ./update_files"]
     })
 
