@@ -35,7 +35,7 @@ At the end of that, you'll have an image for importing into virtualbox
 
 ## Filesets
 
-To build a VM with filesets included, [install git-annex](https://git-annex.branchable.com/install/) and run
+To build a VM with filesets included, install zsync or wget as needed and run:
 
     $ make VER=HEAD FILESETS=standard
 
