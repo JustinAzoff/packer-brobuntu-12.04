@@ -18,7 +18,7 @@ fi
 
 #Clean package stuff
 apt-get clean
-rm /var/lib/apt/lists/*
+#rm /var/lib/apt/lists/*
 rm /var/cache/lsc_packages.db
 
 #remove packages that aren't needed anymore
