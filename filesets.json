@@ -1,14 +1,8 @@
 {
-    "standard" : {
+    "brocon14" : {
         "method": "zsync",
-        "url": "http://www.bouncybouncy.net/test-2014.tar.zsync",
-        "dest": "test-2014.tar",
-        "path": "~/test-2014"
-    },
-    "blah" : {
-        "method": "zsync",
-        "url": "http://www.bouncybouncy.net/blah-2014.tar.zsync",
-        "dest": "blah-2014.tar",
-        "path": "~/blah-2014"
+        "url": "http://www.bro.org/static/BroCon14/BroCon14.tar.zsync",
+        "dest": "BroCon14.tar",
+        "path": "~/exercises/"
     }
 }
