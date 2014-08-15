@@ -64,6 +64,8 @@ function configure_bro {
         (cd /bro ; ln -s share/bro/site . )
     fi
     echo 'export PATH=$PATH:/bro/bin' > /etc/profile.d/bro.sh
+
+    ln -s /home/bro/exercises /exercises
 }
 
 pre_setup
