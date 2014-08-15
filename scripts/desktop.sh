@@ -2,7 +2,7 @@
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get -y install lubuntu-desktop --no-install-recommends 
-apt-get -y install evince
+apt-get -y install evince firefox
 #remove update notifier
 apt-get -y remove update-notifier
 
