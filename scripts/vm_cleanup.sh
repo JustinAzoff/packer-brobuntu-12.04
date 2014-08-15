@@ -21,6 +21,12 @@ apt-get clean
 #rm /var/lib/apt/lists/*
 rm /var/cache/lsc_packages.db
 
+echo "remove unused kernels"
+dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs apt-get -y purge
+
+#make sure virtualbox stuff will work
+dkms autoinstall
+
 #remove packages that aren't needed anymore
 apt-get autoremove -y
 

@@ -59,6 +59,7 @@
             "type": "shell",
             "scripts": [
                 "scripts/bro.sh",
+                "scripts/fix_apt.sh",
                 "scripts/desktop.sh"
             ],
             "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
@@ -90,8 +91,9 @@
         {
             "type": "shell",
             "scripts": [
-                "scripts/bro_deps.sh",
                 "scripts/upgrade.sh",
+                "scripts/bro_deps.sh",
+                "scripts/reboot.sh",
                 "scripts/vm_cleanup.sh"
             ],
             "execute_command": "echo 'bro' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
