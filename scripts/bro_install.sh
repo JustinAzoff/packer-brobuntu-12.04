@@ -20,7 +20,7 @@ function pre_setup {
 
 function install_prereqs {
     apt-get -y install build-essential git zsync
-    apt-get -y install bison flex cmake swig
+    apt-get -y install bison flex cmake swig gawk
     apt-get -y install libssl-dev libgeoip-dev libmagic-dev libpcap-dev python-dev libcurl4-openssl-dev
     apt-get -y install geoip-database-contrib
 }
