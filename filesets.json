@@ -4,5 +4,11 @@
         "url": "http://www.bro.org/static/BroCon14/BroCon14.tar.zsync",
         "dest": "BroCon14.tar",
         "path": "~/exercises/"
+    },
+    "NSFCSS14" : {
+        "method": "zsync",
+        "url": "http://www.bro.org/static/NSFCSS14/NSFCSS14.tar.zsync",
+        "dest": "NSFCSS14.tar",
+        "path": "~/"
     }
 }
